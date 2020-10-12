@@ -22,7 +22,7 @@ from testtools.tests.helpers import LoggingResult
 
 import testscenarios
 
-class TestTestWithScenarios(testtools.TestCase):
+class TestTestWithScenarios(testscenarios.WithScenarios, testtools.TestCase):
 
     scenarios = testscenarios.scenarios.per_module_scenarios(
         'impl', (('unittest', 'unittest'), ('unittest2', 'unittest2')))
